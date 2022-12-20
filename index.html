@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMC calculator</title>
+    <title>Calculadora de IMC</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
@@ -15,28 +15,42 @@
 </head>
 <body>
     
+    <div class="alert-error">
+        Digite somente números
+    </div>
+
     <main>
 
         <div class="screen1">
 
             <h1>Cálculo de IMC</h1>
 
-            <label for="">Peso (kg)</label>
-            <input type="text" pattern="[0-9]{3}">
+            <form action="">
 
-            <label for="">Altura (m)</label>
-            <input type="text" pattern="[0-9]{3}">
+                <label for="weight">Peso (kg)</label>
+                <input type="text" pattern="[0-9]{2}" id="weight" placeholder="ex.: 60">
 
-            <button>
-                Calcular IMC
-                <img src="./assets/arrow.svg" alt="">
-            </button>
+                <label for="height">Altura (cm)</label>
+                <input type="text" pattern="[0-9]{3}" id="height" placeholder="ex.: 165">
+
+                <button>
+                    Calcular IMC
+                    <img src="./assets/arrow.svg" alt="">
+                </button>
+
+            </form>
 
         </div>
 
-        <div class="screen2 hide">
+        <div class="screen2">
+            
+            <div class="imc">
 
-            <h1>Seu IMC é de 28</h1>
+                <button class="close"><img src="./assets/pop.svg" alt=""></button>
+                <h1>Seu IMC é de 28</h1>
+
+            </div>
+            
 
         </div>
 
