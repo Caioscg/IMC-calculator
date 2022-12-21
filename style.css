@@ -157,6 +157,8 @@ input::placeholder {
 .alert-error.open {
     visibility: visible;
     opacity: 1;
+
+    transform: translateY(0);
 }
 
 .alert-error {
@@ -178,6 +180,9 @@ input::placeholder {
 
     visibility: hidden;
     opacity: 0;
+
+    transform: translateY(-30px);
+    transition: transform .5s;
 }
 
 @media (max-width: 440px) {
